@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheros Console - NSS Space Settlement Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a5f 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #b0c4de;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #ccc;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .features {
+            margin: 30px 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .feature-item {
+            padding: 10px 0;
+            color: #b0c4de;
+        }
+
+        .feature-item strong {
+            color: #00d4ff;
+        }
+
+        .button-container {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #1a2a3a;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .info-box {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid #00d4ff;
+            border-radius: 5px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 212, 255, 0.3);
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .github-link {
+            margin-top: 15px;
+        }
+
+        .github-link a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .github-link a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚀</div>
+        
+        <h1>AETHEROS CONSOLE</h1>
+        <p class="subtitle">NSS Space Settlement Management System</p>
+        
+        <p class="description">
+            Welcome to Aetheros Console - A comprehensive management system for the National Space Society 
+            Gerard K. O'Neill Space Settlement Design Competition. Manage your space station operations 
+            with professional efficiency and real-time monitoring capabilities.
+        </p>
+
+        <div class="features">
+            <div class="feature-item"><strong>✓ Admin Dashboard</strong> - Full station management and system controls</div>
+            <div class="feature-item"><strong>✓ Personnel Management</strong> - Schedules, tasks, and announcements</div>
+            <div class="feature-item"><strong>✓ Real-time Monitoring</strong> - Live station system data</div>
+            <div class="feature-item"><strong>✓ Resource Tracking</strong> - Complete resource management</div>
+        </div>
+
+        <div class="button-container">
+            <a href="https://9000-firebase-studio-1767498291955.cluster-ejd22kqny5htuv5dfowoyipt52.cloudworkstations.dev/" class="btn btn-primary">Launch Application</a>
+            <a href="https://github.com/gottimukulasaisaathvik-cloud/aetheros-console-website" class="btn btn-secondary">View on GitHub</a>
+        </div>
+
+        <div class="info-box">
+            <strong>ℹ️ About This Project</strong><br><br>
+            Aetheros Console is built with React/Next.js and Firebase technologies. The application provides 
+            a complete suite of tools for managing space settlement operations as part of the NSS Gerard K. O'Neill 
+            Space Settlement Design Competition. Click the Launch button above to access the full application.
+        </div>
+
+        <div class="footer">
+            <p>Aetheros Console v1.0 | NSS Space Settlement Design Competition</p>
+            <p>Developed for space exploration and settlement simulation</p>
+            <div class="github-link">
+                <a href="https://github.com/gottimukulasaisaathvik-cloud">View More Projects →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
