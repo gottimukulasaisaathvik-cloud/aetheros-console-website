@@ -1,0 +1,215 @@
+/* Aetheros Console - Sidebar & Chart Layout Fixes */
+/* This file fixes sidebar and chart overflow issues */
+
+/* ============================================
+   1. SIDEBAR CONTAINER FIX
+   ============================================ */
+.sidebar,
+[class*="sidebar"],
+[class*="Sidebar"] {
+  position: relative;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   2. CHART & GRAPH CONTAINER FIXES
+   ============================================ */
+.chart-container,
+[class*="chart"],
+[class*="Chart"],
+[class*="graph"],
+[class*="Graph"],
+.recharts-wrapper,
+.apex-charts,
+.chart {
+  position: relative;
+  z-index: 1;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Recharts specific fixes */
+.recharts-wrapper {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important;
+}
+
+.recharts-responsive-container {
+  height: auto !important;
+  max-height: 400px !important;
+}
+
+/* ApexCharts specific fixes */
+.apex-charts,
+#apexcharts-wrapper {
+  width: 100% !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+}
+
+/* ============================================
+   3. MAIN CONTENT AREA FIX
+   ============================================ */
+.content,
+[class*="content"],
+[class*="main"],
+.dashboard,
+[class*="dashboard"],
+.app-content,
+[class*="app-content"] {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ============================================
+   4. LAYOUT CONTAINER FIX
+   ============================================ */
+.layout-container,
+[class*="layout"],
+[class*="Layout"],
+.app-container,
+[class*="app-container"],
+[class*="App-container"] {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layout-container > *,
+[class*="layout"] > *,
+.app-container > * {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* ============================================
+   5. HEADER/NAVIGATION FIX
+   ============================================ */
+header,
+nav,
+[class*="header"],
+[class*="Header"],
+[class*="nav"],
+[class*="Nav"],
+[class*="navbar"],
+[class*="NavBar"] {
+  position: relative;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   6. SCROLLABLE CONTENT AREA
+   ============================================ */
+[class*="scrollable"],
+[class*="Scrollable"],
+[class*="scroll"] {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+[class*="scrollable"] .chart-container,
+[class*="scrollable"] [class*="chart"],
+[class*="scroll"] .chart-container,
+[class*="scroll"] [class*="chart"] {
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   7. FLEX CONTAINER FIXES
+   ============================================ */
+.flex-container,
+[class*="flex-container"] {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-container > *,
+[class*="flex-container"] > * {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* ============================================
+   8. RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 1024px) {
+  .chart-container,
+  [class*="chart"] {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar,
+  [class*="sidebar"] {
+    max-height: 50vh;
+    position: absolute;
+    right: 0;
+  }
+
+  .chart-container,
+  [class*="chart"] {
+    max-height: 250px;
+  }
+}
+
+/* ============================================
+   9. UTILITY CLASSES
+   ============================================ */
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.max-h-screen {
+  max-height: 100vh;
+}
+
+.max-h-400 {
+  max-height: 400px;
+}
+
+.z-100 {
+  z-index: 100;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+/* ============================================
+   10. FIX FOR ABSOLUTE/FIXED POSITIONED ELEMENTS
+   ============================================ */
+[style*="position: fixed"] .chart-container,
+[style*="position: absolute"] .chart-container {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+/* Ensure z-index stacking is proper */
+* {
+  position: relative;
+}
